@@ -2439,6 +2439,7 @@ static int bcg729_decoder_input(decoder_t *dec, const str *data, GQueue *out) {
 		frame->pts = pts;
 		if (av_frame_get_buffer(frame, 0) < 0)
 			abort();
+		frame->linesize[0] = frame_len;
 
 		pts += frame->nb_samples;
 
