@@ -42,7 +42,7 @@ static int null_crypt_rtcp(struct crypto_context *c, struct rtcp_packet *r, str 
 
 /* all lengths are in bytes */
 struct crypto_suite __crypto_suites[] = {
-	{
+  /*	{
 		.name			= "AEAD_AES_256_GCM",
 		.dtls_name		= "SRTP_AEAD_AES_256_GCM",
 		.master_key_len		= 32,
@@ -183,7 +183,7 @@ struct crypto_suite __crypto_suites[] = {
 		.hash_rtcp		= hmac_sha1_rtcp,
 		.session_key_init	= aes_cm_session_key_init,
 		.session_key_cleanup	= evp_session_key_cleanup,
-	},
+                }, */
 	{
 		.name			= "AES_CM_128_HMAC_SHA1_80",
 		.dtls_name		= "SRTP_AES128_CM_SHA1_80",
@@ -208,7 +208,7 @@ struct crypto_suite __crypto_suites[] = {
 		.session_key_init	= aes_cm_session_key_init,
 		.session_key_cleanup	= evp_session_key_cleanup,
 	},
-	{
+        /*	{
 		.name			= "AES_CM_128_HMAC_SHA1_32",
 		.dtls_name		= "SRTP_AES128_CM_SHA1_32",
 		.master_key_len		= 16,
@@ -325,7 +325,7 @@ struct crypto_suite __crypto_suites[] = {
 		.hash_rtp		= hmac_sha1_rtp,
 		.hash_rtcp		= hmac_sha1_rtcp,
 		.session_key_cleanup	= evp_session_key_cleanup,
-	},
+                }, */
 };
 
 const struct crypto_suite *crypto_suites = __crypto_suites;
